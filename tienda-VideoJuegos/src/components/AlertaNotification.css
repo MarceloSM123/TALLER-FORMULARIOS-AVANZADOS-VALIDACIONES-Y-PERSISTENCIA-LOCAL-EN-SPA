@@ -1,0 +1,78 @@
+.toast-notificacion {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  min-width: 300px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s forwards;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+}
+
+.toast-notificacion.toast-warning {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.toast-icon {
+  font-size: 1.5rem;
+}
+
+.toast-mensaje {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.toast-progreso {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.7);
+  width: 100%;
+  animation: progreso 3s linear forwards;
+  border-radius: 0 0 12px 12px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes progreso {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast-notificacion {
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+  }
+}

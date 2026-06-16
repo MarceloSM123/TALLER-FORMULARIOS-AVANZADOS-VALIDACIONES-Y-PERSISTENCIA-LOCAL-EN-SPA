@@ -400,3 +400,42 @@
   background: #dc3545;
   color: white;
 }
+
+/* ========== ESTILOS DE ERRORES ========== */
+.error-input {
+  border: 2px solid #f44336 !important;
+  background-color: #fff5f5 !important;
+}
+
+.error-mensaje {
+  color: #f44336;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+  animation: errorShake 0.3s ease;
+}
+
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Mejoras para textarea */
+textarea {
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #11998e;
+  box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.2);
+  outline: none;
+}
+
+/* Estilo para el pequeño contador de caracteres */
+.form-group small {
+  color: #666;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+}
