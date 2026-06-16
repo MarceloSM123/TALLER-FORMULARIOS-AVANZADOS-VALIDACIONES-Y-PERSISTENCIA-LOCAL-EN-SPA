@@ -20,7 +20,7 @@ function FormularioVideojuego({ onGuardar }) {
   const [progreso, setProgreso] = useState(0);
   
 
-  const [errores, setErrores] = useState({});
+  const [errores, setErrores] = useState({}) ; 
 
 
   useEffect(() => {
@@ -91,7 +91,7 @@ function FormularioVideojuego({ onGuardar }) {
 
     setErrores(nuevosErrores);
     return Object.keys(nuevosErrores).length === 0;
-  };
+   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
